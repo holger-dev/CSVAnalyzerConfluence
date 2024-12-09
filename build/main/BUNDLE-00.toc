@@ -1,0 +1,3 @@
+([('main',
+   '/Users/holgertrampe/HeidkampNC/Documents/Schule/CSVAnalyzerConfluence/dist/main',
+   'EXECUTABLE')],)

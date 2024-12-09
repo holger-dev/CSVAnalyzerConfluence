@@ -12,3 +12,8 @@ weiteren Daten oder andere Elemente gespeichert. Wird das Programm beendet, sind
 ebenfalls entfernt.
 4. Nun kann im Programm über Gruppen/Benutzer gefiltert werden. Weitere Infos direkt im Programm
 ***
+## Dists erstellen
+Zum erstellen der einzelnen Dist-Files diesen Befehl im Terminal eingeben, vorher ins Git navigieren:
+'''
+pyinstaller --onefile --windowed --add-data "/opt/homebrew/Cellar/tcl-tk/9.0.0_1/lib/libtcl9.0.dylib:." --add-data "/opt/homebrew/Cellar/tcl-tk/9.0.0_1/lib/libtcl9tk9.0.dylib:." main.py
+'''
