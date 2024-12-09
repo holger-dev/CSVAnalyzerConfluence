@@ -14,6 +14,6 @@ ebenfalls entfernt.
 ***
 ## Dists erstellen
 Zum erstellen der einzelnen Dist-Files diesen Befehl im Terminal eingeben, vorher ins Git navigieren:
-'''
+´´´
 pyinstaller --onefile --windowed --add-data "/opt/homebrew/Cellar/tcl-tk/9.0.0_1/lib/libtcl9.0.dylib:." --add-data "/opt/homebrew/Cellar/tcl-tk/9.0.0_1/lib/libtcl9tk9.0.dylib:." main.py
-'''
+´´´
