@@ -44,6 +44,12 @@ class CSVAnalyzerApp:
         # Überschrift für Benutzer
         self.user_count_label = tk.Label(self.user_frame, text="Benutzer: 0", font=("Helvetica", 12))
         self.user_count_label.pack(pady=5)
+        
+
+        # Label für Gastbenutzeranzahl
+        self.guest_count_label = tk.Label(self.user_frame, text="HIBB-Cloud Gäste: 0", font=("Helvetica", 12))
+        self.guest_count_label.pack(pady=0)
+
         tk.Label(self.user_frame, text="Benutzer", font=("Helvetica", 16)).pack(pady=5)
 
         # Suchleiste für Benutzer
@@ -114,6 +120,11 @@ class CSVAnalyzerApp:
                 # Listboxen aktualisieren
                 self.update_group_listbox(sorted(result_groups))
                 self.update_person_listbox(sorted(result_all_users))
+
+                # Gäste zählen
+                guest_group_name = "1-HIBB-Gaeste-Confluence"
+                guest_users = self.group_data.get(guest_group_name, set())
+                self.guest_count_label.config(text=f"HIBB-Cloud Gäste: {len(guest_users)}")
 
             except Exception as e:
                 messagebox.showerror("Fehler", f"Fehler beim Laden der CSV-Datei: {e}")

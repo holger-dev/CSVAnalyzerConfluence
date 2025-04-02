@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('/opt/homebrew/Cellar/tcl-tk/9.0.1/lib/libtcl9.0.dylib', '.'), ('/opt/homebrew/Cellar/tcl-tk/9.0.1/lib/libtcl9tk9.0.dylib', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,4 +35,10 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+)
+app = BUNDLE(
+    exe,
+    name='main.app',
+    icon=None,
+    bundle_identifier=None,
 )
